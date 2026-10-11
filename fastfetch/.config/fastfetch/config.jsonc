@@ -1,0 +1,59 @@
+// ~/.config/fastfetch/config.jsonc
+// Палитра обоев: персиковый навес, пыльная роза, лаванда сакуры, крем, сине-зелёная тень
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  "logo": {
+    "type": "kitty",
+    "source": "~/.config/fastfetch/sasakiU.png",
+    "width": 34,
+    "padding": { "top": 1, "left": 1, "right": 3 }
+  },
+
+  "display": {
+    "separator": "  ",
+    "color": {
+      "keys": "38;2;253;186;158",
+      "title": "38;2;254;246;223",
+      "output": "38;2;245;233;216",
+      "separator": "38;2;165;140;205"
+    },
+    "percent": { "type": 1 }
+  },
+
+  "modules": [
+    {
+      "type": "custom",
+      "format": "\u001b[38;2;190;144;138m╭───── \u001b[38;2;214;96;92m☁ 裏口 \u001b[38;2;190;144;138m· за супермаркетом ─────╮"
+    },
+    {
+      "type": "title",
+      "key": "👤",
+      "format": "{user-name}\u001b[38;2;165;140;205m@\u001b[38;2;253;186;158m{host-name}"
+    },
+    { "type": "custom", "format": "\u001b[38;2;165;140;205m├──────────────────────────────────╯" },
+
+    { "type": "os",       "key": "🌐 Система    " },
+    { "type": "kernel",   "key": "🧬 Ядро       " },
+    { "type": "wm",       "key": "🪟 Окна       " },
+    { "type": "shell",    "key": "💬 Оболочка   " },
+    { "type": "terminal", "key": "📟 Терминал   " },
+
+    { "type": "custom", "format": "\u001b[38;2;120;165;180m├─ ✦ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─" },
+
+    { "type": "uptime",   "key": "🚬 Перекур     " },
+    { "type": "packages", "key": "🛒 Супермаркет " },
+    { "type": "cpu",      "key": "⚡ Энергетик   ", "format": "{cores-physical}c/{cores-logical}t @ {freq-max}" },
+    { "type": "gpu",      "key": "🌸 Сакура      ", "format": "{name}" },
+    { "type": "memory",   "key": "🥤 Банка колы  ", "format": "{used} / {total} ({percentage})" },
+    { "type": "disk",     "key": "🧊 Холодильник ", "folders": "/", "format": "{size-used} / {size-total} ({size-percentage})" },
+    { "type": "display",  "key": "🖥️ Окно в мир  ", "format": "{width}x{height} @ {refresh-rate}Hz" },
+
+    { "type": "custom", "format": "\u001b[38;2;165;140;205m├──────────────────────────────────╮" },
+    { "type": "colors", "symbol": "circle", "paddingLeft": 2 },
+    {
+      "type": "custom",
+      "format": "\u001b[38;2;190;144;138m╰───── \u001b[38;2;214;96;92mほっと一息 \u001b[38;2;190;144;138m· закат, дым, тишина ─────╯"
+    }
+  ]
+}
