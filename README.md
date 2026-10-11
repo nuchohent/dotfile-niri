@@ -71,6 +71,8 @@ stow -D niri DankMaterialShell fastfetch wallpapers
 
 - Файлы `niri/.config/niri/dms/*.kdl` **генерируются самим DMS** и при работе
   перезаписываются. В репозитории они лежат как снимок рабочего состояния.
+- Stow **не трогает** этот `dms/` (см. `niri/.stow-local-ignore`) — им владеет DMS,
+  стow линкует только `config.kdl`.
 - Свои правки в Niri держите в `config.kdl` — DMS-файлы не редактируйте.
 - Выбор обоев DMS хранит в `~/.local/state/DankMaterialShell/session.json`
   (не в этом репозитории). После установки выбери обоины из
